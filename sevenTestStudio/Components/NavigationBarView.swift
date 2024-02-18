@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct NavigationBarView: View {
+    let title: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+	   VStack {
+		  Text(title)
+			 .foregroundColor(Color("navigationTitle"))
+			 .font(.system(size: 18, weight: .semibold))
+		  Divider()
+			 .background(Color("navStrip"))
+			 .frame(height: 2)
+		  Divider()
+			 .background(Color("navStrip"))
+			 .frame(height: 1)
+	   }
     }
-}
-
-#Preview {
-    NavigationBarView()
 }
