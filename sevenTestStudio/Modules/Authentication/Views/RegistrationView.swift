@@ -56,7 +56,7 @@ struct RegistrationView: View {
 		  .padding(.horizontal, 18)
 		  
 		  Button {
-			 viewModel.goRegis(login: email, password: password)
+			 viewModel.register(login: email, password: password)
 		  } label: {
 			 Text("Зарегистрироваться")
 				.fontWeight(.semibold)
@@ -102,3 +102,4 @@ extension RegistrationView: AuthenticationFormProtocol {
 #Preview {
     RegistrationView()
 }
+

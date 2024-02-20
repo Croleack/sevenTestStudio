@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90FD5972B8312FB00358EEF /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5962B8312FB00358EEF /* Cafe.swift */; };
+		E90FD5E42B84AC3600358EEF /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5D22B84AC3600358EEF /* ParameterEncoding.swift */; };
+		E90FD5E52B84AC3600358EEF /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5D32B84AC3600358EEF /* URLParameterEncoder.swift */; };
+		E90FD5E62B84AC3600358EEF /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5D42B84AC3600358EEF /* JSONParameterEncoder.swift */; };
+		E90FD5E72B84AC3600358EEF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5D62B84AC3600358EEF /* NetworkManager.swift */; };
+		E90FD5E82B84AC3600358EEF /* SevenWindsStudioEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5D82B84AC3600358EEF /* SevenWindsStudioEndpoint.swift */; };
+		E90FD5E92B84AC3600358EEF /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5DA2B84AC3600358EEF /* LoginResponse.swift */; };
+		E90FD5EA2B84AC3600358EEF /* CafeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5DB2B84AC3600358EEF /* CafeResponse.swift */; };
+		E90FD5EB2B84AC3600358EEF /* CafesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5DC2B84AC3600358EEF /* CafesResponse.swift */; };
+		E90FD5EC2B84AC3600358EEF /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5DD2B84AC3600358EEF /* Coffee.swift */; };
+		E90FD5ED2B84AC3600358EEF /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5DF2B84AC3600358EEF /* NetworkRouter.swift */; };
+		E90FD5EE2B84AC3600358EEF /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5E02B84AC3600358EEF /* HTTPTask.swift */; };
+		E90FD5EF2B84AC3600358EEF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5E12B84AC3600358EEF /* HTTPMethod.swift */; };
+		E90FD5F02B84AC3600358EEF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5E22B84AC3600358EEF /* Router.swift */; };
+		E90FD5F12B84AC3600358EEF /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5E32B84AC3600358EEF /* EndpointType.swift */; };
+		E90FD5F32B84AD4F00358EEF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5F22B84AD4E00358EEF /* LoadingView.swift */; };
+		E90FD5F52B84AD7A00358EEF /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5F42B84AD7A00358EEF /* ButtonView.swift */; };
+		E90FD5F72B84AD9400358EEF /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5F62B84AD9400358EEF /* BackButton.swift */; };
+		E90FD6002B84ADC600358EEF /* CafesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FA2B84ADC600358EEF /* CafesViewModel.swift */; };
+		E90FD6012B84ADC600358EEF /* CafeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FC2B84ADC600358EEF /* CafeListView.swift */; };
+		E90FD6022B84ADC600358EEF /* CafeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FD2B84ADC600358EEF /* CafeDetailView.swift */; };
+		E90FD6032B84ADC600358EEF /* CoffeeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FE2B84ADC600358EEF /* CoffeeCellView.swift */; };
+		E90FD6042B84ADC600358EEF /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FF2B84ADC600358EEF /* OrderView.swift */; };
 		E953B7D92B80FDE50007AC01 /* sevenTestStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B7D82B80FDE50007AC01 /* sevenTestStudioApp.swift */; };
 		E953B7DB2B80FDE50007AC01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B7DA2B80FDE50007AC01 /* ContentView.swift */; };
 		E953B7DD2B80FDE70007AC01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E953B7DC2B80FDE70007AC01 /* Assets.xcassets */; };
@@ -19,13 +42,7 @@
 		E953B80C2B8100280007AC01 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B80B2B8100270007AC01 /* RegistrationView.swift */; };
 		E953B80F2B8100510007AC01 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B80E2B8100510007AC01 /* AuthViewModel.swift */; };
 		E953B8112B8112350007AC01 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B8102B8112350007AC01 /* NavigationBarView.swift */; };
-		E953B8242B812B9A0007AC01 /* ConfigurationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B81D2B812B9A0007AC01 /* ConfigurationError.swift */; };
-		E953B8252B812B9A0007AC01 /* FormError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B81E2B812B9A0007AC01 /* FormError.swift */; };
-		E953B8262B812B9A0007AC01 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B81F2B812B9A0007AC01 /* NetworkError.swift */; };
-		E953B82E2B81C45A0007AC01 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B82D2B81C45A0007AC01 /* LocationView.swift */; };
-		E953B8312B822EE30007AC01 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B8302B822EE30007AC01 /* WebService.swift */; };
-		E953B8332B824EB40007AC01 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B8322B824EB40007AC01 /* LocationResponse.swift */; };
-		E953B8352B82543B0007AC01 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B8342B82543B0007AC01 /* LocationViewModel.swift */; };
+		E953B8332B824EB40007AC01 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B8322B824EB40007AC01 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +63,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E90FD5962B8312FB00358EEF /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		E90FD5D22B84AC3600358EEF /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		E90FD5D32B84AC3600358EEF /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		E90FD5D42B84AC3600358EEF /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		E90FD5D62B84AC3600358EEF /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E90FD5D82B84AC3600358EEF /* SevenWindsStudioEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SevenWindsStudioEndpoint.swift; sourceTree = "<group>"; };
+		E90FD5DA2B84AC3600358EEF /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		E90FD5DB2B84AC3600358EEF /* CafeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeResponse.swift; sourceTree = "<group>"; };
+		E90FD5DC2B84AC3600358EEF /* CafesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafesResponse.swift; sourceTree = "<group>"; };
+		E90FD5DD2B84AC3600358EEF /* Coffee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		E90FD5DF2B84AC3600358EEF /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		E90FD5E02B84AC3600358EEF /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		E90FD5E12B84AC3600358EEF /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E90FD5E22B84AC3600358EEF /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E90FD5E32B84AC3600358EEF /* EndpointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		E90FD5F22B84AD4E00358EEF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E90FD5F42B84AD7A00358EEF /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		E90FD5F62B84AD9400358EEF /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		E90FD5FA2B84ADC600358EEF /* CafesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafesViewModel.swift; sourceTree = "<group>"; };
+		E90FD5FC2B84ADC600358EEF /* CafeListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeListView.swift; sourceTree = "<group>"; };
+		E90FD5FD2B84ADC600358EEF /* CafeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeDetailView.swift; sourceTree = "<group>"; };
+		E90FD5FE2B84ADC600358EEF /* CoffeeCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeCellView.swift; sourceTree = "<group>"; };
+		E90FD5FF2B84ADC600358EEF /* OrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		E953B7D52B80FDE50007AC01 /* sevenTestStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sevenTestStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E953B7D82B80FDE50007AC01 /* sevenTestStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sevenTestStudioApp.swift; sourceTree = "<group>"; };
 		E953B7DA2B80FDE50007AC01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,14 +101,8 @@
 		E953B80B2B8100270007AC01 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		E953B80E2B8100510007AC01 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E953B8102B8112350007AC01 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
-		E953B81D2B812B9A0007AC01 /* ConfigurationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationError.swift; sourceTree = "<group>"; };
-		E953B81E2B812B9A0007AC01 /* FormError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormError.swift; sourceTree = "<group>"; };
-		E953B81F2B812B9A0007AC01 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		E953B82D2B81C45A0007AC01 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		E953B82F2B81C5000007AC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E953B8302B822EE30007AC01 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		E953B8322B824EB40007AC01 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
-		E953B8342B82543B0007AC01 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		E953B8322B824EB40007AC01 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +130,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E90FD5D02B84AC3600358EEF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E90FD5D12B84AC3600358EEF /* Encoding */,
+				E90FD5D52B84AC3600358EEF /* Manager */,
+				E90FD5D72B84AC3600358EEF /* Endpoint */,
+				E90FD5D92B84AC3600358EEF /* Model */,
+				E90FD5DE2B84AC3600358EEF /* Service */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E90FD5D12B84AC3600358EEF /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				E90FD5D22B84AC3600358EEF /* ParameterEncoding.swift */,
+				E90FD5D32B84AC3600358EEF /* URLParameterEncoder.swift */,
+				E90FD5D42B84AC3600358EEF /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		E90FD5D52B84AC3600358EEF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E90FD5D62B84AC3600358EEF /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E90FD5D72B84AC3600358EEF /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				E90FD5D82B84AC3600358EEF /* SevenWindsStudioEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		E90FD5D92B84AC3600358EEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E90FD5DA2B84AC3600358EEF /* LoginResponse.swift */,
+				E90FD5DB2B84AC3600358EEF /* CafeResponse.swift */,
+				E90FD5DC2B84AC3600358EEF /* CafesResponse.swift */,
+				E90FD5DD2B84AC3600358EEF /* Coffee.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E90FD5DE2B84AC3600358EEF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E90FD5DF2B84AC3600358EEF /* NetworkRouter.swift */,
+				E90FD5E02B84AC3600358EEF /* HTTPTask.swift */,
+				E90FD5E12B84AC3600358EEF /* HTTPMethod.swift */,
+				E90FD5E22B84AC3600358EEF /* Router.swift */,
+				E90FD5E32B84AC3600358EEF /* EndpointType.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E90FD5F82B84ADC600358EEF /* CafeList */ = {
+			isa = PBXGroup;
+			children = (
+				E90FD5F92B84ADC600358EEF /* ViewsModel */,
+				E90FD5FB2B84ADC600358EEF /* Views */,
+			);
+			path = CafeList;
+			sourceTree = "<group>";
+		};
+		E90FD5F92B84ADC600358EEF /* ViewsModel */ = {
+			isa = PBXGroup;
+			children = (
+				E90FD5FA2B84ADC600358EEF /* CafesViewModel.swift */,
+			);
+			path = ViewsModel;
+			sourceTree = "<group>";
+		};
+		E90FD5FB2B84ADC600358EEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E90FD5FC2B84ADC600358EEF /* CafeListView.swift */,
+				E90FD5FD2B84ADC600358EEF /* CafeDetailView.swift */,
+				E90FD5FE2B84ADC600358EEF /* CoffeeCellView.swift */,
+				E90FD5FF2B84ADC600358EEF /* OrderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E953B7CC2B80FDE50007AC01 = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +289,7 @@
 		E953B8032B80FF3F0007AC01 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E953B82C2B81C4490007AC01 /* Locations */,
+				E90FD5F82B84ADC600358EEF /* CafeList */,
 				E953B8042B80FF630007AC01 /* Authentication */,
 			);
 			path = Modules;
@@ -195,6 +318,9 @@
 			children = (
 				E953B8092B80FFE60007AC01 /* InputView.swift */,
 				E953B8102B8112350007AC01 /* NavigationBarView.swift */,
+				E90FD5F22B84AD4E00358EEF /* LoadingView.swift */,
+				E90FD5F42B84AD7A00358EEF /* ButtonView.swift */,
+				E90FD5F62B84AD9400358EEF /* BackButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -219,8 +345,7 @@
 		E953B8132B812AB50007AC01 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E953B8272B8130270007AC01 /* Keychain */,
-				E953B8172B812B9A0007AC01 /* Network */,
+				E90FD5D02B84AC3600358EEF /* Network */,
 				E953B8142B812AFD0007AC01 /* Models */,
 			);
 			path = Services;
@@ -229,44 +354,10 @@
 		E953B8142B812AFD0007AC01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E953B8322B824EB40007AC01 /* LocationResponse.swift */,
+				E953B8322B824EB40007AC01 /* LocationManager.swift */,
+				E90FD5962B8312FB00358EEF /* Cafe.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		E953B8172B812B9A0007AC01 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				E953B8302B822EE30007AC01 /* WebService.swift */,
-				E953B81B2B812B9A0007AC01 /* NetworkError */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		E953B81B2B812B9A0007AC01 /* NetworkError */ = {
-			isa = PBXGroup;
-			children = (
-				E953B81D2B812B9A0007AC01 /* ConfigurationError.swift */,
-				E953B81E2B812B9A0007AC01 /* FormError.swift */,
-				E953B81F2B812B9A0007AC01 /* NetworkError.swift */,
-			);
-			path = NetworkError;
-			sourceTree = "<group>";
-		};
-		E953B8272B8130270007AC01 /* Keychain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Keychain;
-			sourceTree = "<group>";
-		};
-		E953B82C2B81C4490007AC01 /* Locations */ = {
-			isa = PBXGroup;
-			children = (
-				E953B82D2B81C45A0007AC01 /* LocationView.swift */,
-				E953B8342B82543B0007AC01 /* LocationViewModel.swift */,
-			);
-			path = Locations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,20 +490,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90FD6032B84ADC600358EEF /* CoffeeCellView.swift in Sources */,
+				E90FD5EB2B84AC3600358EEF /* CafesResponse.swift in Sources */,
 				E953B8072B80FF950007AC01 /* LoginView.swift in Sources */,
-				E953B8332B824EB40007AC01 /* LocationResponse.swift in Sources */,
-				E953B8242B812B9A0007AC01 /* ConfigurationError.swift in Sources */,
-				E953B8252B812B9A0007AC01 /* FormError.swift in Sources */,
+				E953B8332B824EB40007AC01 /* LocationManager.swift in Sources */,
 				E953B80A2B80FFE60007AC01 /* InputView.swift in Sources */,
 				E953B80F2B8100510007AC01 /* AuthViewModel.swift in Sources */,
 				E953B7DB2B80FDE50007AC01 /* ContentView.swift in Sources */,
+				E90FD5EA2B84AC3600358EEF /* CafeResponse.swift in Sources */,
 				E953B7D92B80FDE50007AC01 /* sevenTestStudioApp.swift in Sources */,
-				E953B8262B812B9A0007AC01 /* NetworkError.swift in Sources */,
-				E953B8312B822EE30007AC01 /* WebService.swift in Sources */,
+				E90FD5F52B84AD7A00358EEF /* ButtonView.swift in Sources */,
+				E90FD5E42B84AC3600358EEF /* ParameterEncoding.swift in Sources */,
+				E90FD5972B8312FB00358EEF /* Cafe.swift in Sources */,
+				E90FD5E82B84AC3600358EEF /* SevenWindsStudioEndpoint.swift in Sources */,
+				E90FD5F72B84AD9400358EEF /* BackButton.swift in Sources */,
+				E90FD5F32B84AD4F00358EEF /* LoadingView.swift in Sources */,
+				E90FD5E52B84AC3600358EEF /* URLParameterEncoder.swift in Sources */,
+				E90FD6012B84ADC600358EEF /* CafeListView.swift in Sources */,
+				E90FD6022B84ADC600358EEF /* CafeDetailView.swift in Sources */,
 				E953B8112B8112350007AC01 /* NavigationBarView.swift in Sources */,
-				E953B8352B82543B0007AC01 /* LocationViewModel.swift in Sources */,
 				E953B80C2B8100280007AC01 /* RegistrationView.swift in Sources */,
-				E953B82E2B81C45A0007AC01 /* LocationView.swift in Sources */,
+				E90FD5F12B84AC3600358EEF /* EndpointType.swift in Sources */,
+				E90FD5E72B84AC3600358EEF /* NetworkManager.swift in Sources */,
+				E90FD5F02B84AC3600358EEF /* Router.swift in Sources */,
+				E90FD5E62B84AC3600358EEF /* JSONParameterEncoder.swift in Sources */,
+				E90FD5E92B84AC3600358EEF /* LoginResponse.swift in Sources */,
+				E90FD6002B84ADC600358EEF /* CafesViewModel.swift in Sources */,
+				E90FD5EE2B84AC3600358EEF /* HTTPTask.swift in Sources */,
+				E90FD5EF2B84AC3600358EEF /* HTTPMethod.swift in Sources */,
+				E90FD5EC2B84AC3600358EEF /* Coffee.swift in Sources */,
+				E90FD5ED2B84AC3600358EEF /* NetworkRouter.swift in Sources */,
+				E90FD6042B84ADC600358EEF /* OrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

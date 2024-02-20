@@ -14,49 +14,47 @@ protocol AuthenticationFormProtocol {
 class AuthViewModel: ObservableObject {
     
     @Published var isAuthenticated: Bool = false
+    private let networkManager = NetworkManager()
     
-    func goLogin(login: String, password: String) {
+    func saveToken(token: String, lifetime: Int) {
+	   let currentDate = Date()
+	   let expirationDate = currentDate.addingTimeInterval(TimeInterval(lifetime))
 	   
-	   let defaults = UserDefaults.standard
-	   
-	   WebService().login(login: login,
-					  password: password) { result in
-		  switch result {
-		  case .success(let token):
-			 defaults.setValue(token, forKey: "token")
+	   UserDefaults.standard.setValue(token, forKey: "token")
+	   UserDefaults.standard.set(expirationDate, forKey: "expirationDate")
+    }
+    
+    func login(login: String, password: String) {
+	   networkManager.auth(login: login, password: password) { success, error in
+		  if let error = error {
+			 print(error)
+			 return
+		  }
+		  
+		  if let token = success?.token, let tokenLifetime = success?.tokenLifetime {
+			 self.saveToken(token: token, lifetime: tokenLifetime)
+			 
 			 DispatchQueue.main.async {
 				self.isAuthenticated = true
 			 }
-			 
-		  case .failure(let error):
-			 print(error.localizedDescription)
 		  }
 	   }
     }
     
-    func goRegis(login: String, password: String) {
-	   let defaults = UserDefaults.standard
-	   
-	   WebService().register(login: login,
-						password: password) { result in
-		  switch result {
-		  case .success(let token):
-			 defaults.setValue(token, forKey: "token")
+    func register(login: String, password: String) {
+	   networkManager.register(login: login, password: password) { success, error in
+		  if let error = error {
+			 print(error)
+			 return
+		  }
+		  
+		  if let token = success?.token, let tokenLifetime = success?.tokenLifetime {
+			 self.saveToken(token: token, lifetime: tokenLifetime)
+			 
 			 DispatchQueue.main.async {
 				self.isAuthenticated = true
 			 }
-			 
-		  case .failure(let error):
-			 print(error.localizedDescription)
 		  }
-	   }
-    }
-    
-    func signout() {
-	   let defaults = UserDefaults.standard
-	   defaults.removeObject(forKey: "token")
-	   DispatchQueue.main.async {
-		  self.isAuthenticated = false
 	   }
     }
 }

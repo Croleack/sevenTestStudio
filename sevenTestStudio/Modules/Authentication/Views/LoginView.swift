@@ -33,7 +33,7 @@ struct LoginView: View {
 			 .padding(.top, 190)
 			 
 			 Button {
-				viewModel.goLogin(login: email, password: password)
+				viewModel.login(login: email, password: password)
 			 } label: {
 				Text("Войти")
 				    .fontWeight(.semibold)
@@ -48,7 +48,7 @@ struct LoginView: View {
 			 .padding(.top, 30.51)
 			 
 			 Image(systemName: viewModel.isAuthenticated ? "lock.fill":
-			 "lock.open")
+				    "lock.open")
 			 Spacer()
 			 
 			 NavigationLink {
@@ -71,7 +71,7 @@ struct LoginView: View {
 extension LoginView: AuthenticationFormProtocol {
     var formIsValid: Bool {
 	   return !email.isEmpty
-	   //&& email.contains("@")
+	   && email.contains("@")
 	   && !password.isEmpty
 	   && password.count > 5
     }

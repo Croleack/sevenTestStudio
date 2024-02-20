@@ -14,6 +14,7 @@ struct sevenTestStudioApp: App {
         WindowGroup {
 		  ContentView()
 			 .environmentObject(viewModel)
+			 .environmentObject(LocationManager.shared)
         }
     }
 }

@@ -9,18 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @State private var cafesVM:CafesViewModel? = nil
     
     var body: some View {
 	   Group {
 		  if viewModel.isAuthenticated {
-			 LocationView()
-		  } else {
+			 if let cafesVM = cafesVM {
+				CafeListView(cafesVM: cafesVM)
+			 } else {
+				ProgressView()
+				    .onAppear {
+					   cafesVM = CafesViewModel()
+				    }
+			 }
+		  }
+		  else {
 			 LoginView()
 		  }
 	   }
+	   .onAppear {
+		  if viewModel.isAuthenticated {
+			 cafesVM = CafesViewModel()
+		  }
+	   }
     }
-}
-
-#Preview {
-    ContentView()
 }
