@@ -40,6 +40,7 @@ struct BackButton: View {
 				   height: 1)
 		  
 	   }
+	   .padding(.top, 15)
 	   .padding(.bottom, 15)
 	   
     }

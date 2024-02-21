@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol AuthenticationFormProtocol {
     var formIsValid: Bool {get}
@@ -56,5 +57,8 @@ class AuthViewModel: ObservableObject {
 			 }
 		  }
 	   }
+    }
+    func hideKeyboard() {
+	   UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }

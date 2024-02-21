@@ -86,6 +86,9 @@ struct RegistrationView: View {
 		  }
 		  
 	   }
+	   .onTapGesture {
+		  viewModel.hideKeyboard()
+	   }
     }
 }
 

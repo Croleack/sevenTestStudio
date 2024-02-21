@@ -10,11 +10,11 @@ import SwiftUI
 @main
 struct sevenTestStudioApp: App {
     @StateObject var viewModel = AuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
 		  ContentView()
 			 .environmentObject(viewModel)
-			 .environmentObject(LocationManager.shared)
         }
     }
 }
