@@ -12,7 +12,7 @@ class LocationManagerViewModel: NSObject, ObservableObject, CLLocationManagerDel
     
     private let networkManager = NetworkManager()
     var locationManager: CLLocationManager?
-    var serachTerm = ""
+//    var serachTerm = ""
     //
     @Published private(set) var currentLocation: CLLocationCoordinate2D?
     
@@ -79,32 +79,32 @@ class LocationManagerViewModel: NSObject, ObservableObject, CLLocationManagerDel
 	   }
     }
     
-    func serch() {
-	   let request = MKLocalSearch.Request()
-	   request.naturalLanguageQuery = serachTerm
-	   request.region = region
-	   
-	   let search = MKLocalSearch(request: request)
-	   
-	   search.start { response, error in
-		  guard let response = response else {
-			 if let error = error {
-				print("Ошибка поиска: \(error.localizedDescription)")
-			 }
-			 return
-		  }
-		  
-		  DispatchQueue.main.async {
-			 self.places = response.mapItems.map({ item in
-				Place(name: item.name ?? "",
-					 placemark: item.placemark,
-					 coordinate: item.placemark.coordinate,
-					 adress: item.placemark.locality
-				)
-			 })
-		  }
-	   }
-    }
+//    func serch() {
+//	   let request = MKLocalSearch.Request()
+//	   request.naturalLanguageQuery = serachTerm
+//	   request.region = region
+//	   
+//	   let search = MKLocalSearch(request: request)
+//	   
+//	   search.start { response, error in
+//		  guard let response = response else {
+//			 if let error = error {
+//				print("Ошибка поиска: \(error.localizedDescription)")
+//			 }
+//			 return
+//		  }
+//		  
+//		  DispatchQueue.main.async {
+//			 self.places = response.mapItems.map({ item in
+//				Place(name: item.name ?? "",
+//					 placemark: item.placemark,
+//					 coordinate: item.placemark.coordinate,
+//					 adress: item.placemark.locality
+//				)
+//			 })
+//		  }
+//	   }
+//    }
     
     func selectedPlace(for place: Place) {
 	   self.selectedPlace = place

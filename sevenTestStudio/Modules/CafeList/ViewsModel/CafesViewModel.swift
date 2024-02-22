@@ -57,4 +57,16 @@ class CafesViewModel: ObservableObject {
 		  }
 	   }
     }
+    
+    func incrementCoffeeCount(for coffee: Coffee) {
+	   if let index = order.firstIndex(where: { $0.id == coffee.id }) {
+		  order[index].count += 1
+	   }
+    }
+    
+    func decrementCoffeeCount(for coffee: Coffee) {
+	   if let index = order.firstIndex(where: { $0.id == coffee.id }), order[index].count > 0 {
+		  order[index].count -= 1
+	   }
+    }
 }

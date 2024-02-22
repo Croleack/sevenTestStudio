@@ -28,7 +28,6 @@
 		E90FD6002B84ADC600358EEF /* CafesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FA2B84ADC600358EEF /* CafesViewModel.swift */; };
 		E90FD6012B84ADC600358EEF /* CafeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FC2B84ADC600358EEF /* CafeListView.swift */; };
 		E90FD6022B84ADC600358EEF /* CafeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FD2B84ADC600358EEF /* CafeDetailView.swift */; };
-		E90FD6032B84ADC600358EEF /* CoffeeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FE2B84ADC600358EEF /* CoffeeCellView.swift */; };
 		E90FD6042B84ADC600358EEF /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FF2B84ADC600358EEF /* OrderView.swift */; };
 		E91728B32B85C03500BD06B3 /* LocationManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91728B22B85C03500BD06B3 /* LocationManagerViewModel.swift */; };
 		E953B7D92B80FDE50007AC01 /* sevenTestStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B7D82B80FDE50007AC01 /* sevenTestStudioApp.swift */; };
@@ -47,6 +46,7 @@
 		E9AEBCEF2B85C22700EF9644 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AEBCEE2B85C22700EF9644 /* LocationModel.swift */; };
 		E9AEBCF12B85CFAF00EF9644 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AEBCF02B85CFAF00EF9644 /* LocationView.swift */; };
 		E9AEBCF52B85D93300EF9644 /* SelectedPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AEBCF42B85D93300EF9644 /* SelectedPlaceView.swift */; };
+		E9E794142B87477D00F2DA14 /* CustomNavigationLinkStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E794132B87477D00F2DA14 /* CustomNavigationLinkStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +88,6 @@
 		E90FD5FA2B84ADC600358EEF /* CafesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafesViewModel.swift; sourceTree = "<group>"; };
 		E90FD5FC2B84ADC600358EEF /* CafeListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeListView.swift; sourceTree = "<group>"; };
 		E90FD5FD2B84ADC600358EEF /* CafeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeDetailView.swift; sourceTree = "<group>"; };
-		E90FD5FE2B84ADC600358EEF /* CoffeeCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeCellView.swift; sourceTree = "<group>"; };
 		E90FD5FF2B84ADC600358EEF /* OrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		E91728B22B85C03500BD06B3 /* LocationManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerViewModel.swift; sourceTree = "<group>"; };
 		E953B7D52B80FDE50007AC01 /* sevenTestStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sevenTestStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +110,7 @@
 		E9AEBCEE2B85C22700EF9644 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		E9AEBCF02B85CFAF00EF9644 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		E9AEBCF42B85D93300EF9644 /* SelectedPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPlaceView.swift; sourceTree = "<group>"; };
+		E9E794132B87477D00F2DA14 /* CustomNavigationLinkStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationLinkStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +221,6 @@
 			children = (
 				E90FD5FC2B84ADC600358EEF /* CafeListView.swift */,
 				E90FD5FD2B84ADC600358EEF /* CafeDetailView.swift */,
-				E90FD5FE2B84ADC600358EEF /* CoffeeCellView.swift */,
 				E90FD5FF2B84ADC600358EEF /* OrderView.swift */,
 			);
 			path = Views;
@@ -308,9 +307,9 @@
 		E953B8032B80FF3F0007AC01 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E91728B12B85C01300BD06B3 /* Map */,
-				E90FD5F82B84ADC600358EEF /* CafeList */,
 				E953B8042B80FF630007AC01 /* Authentication */,
+				E90FD5F82B84ADC600358EEF /* CafeList */,
+				E91728B12B85C01300BD06B3 /* Map */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -336,11 +335,12 @@
 		E953B8082B80FFD60007AC01 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E953B8092B80FFE60007AC01 /* InputView.swift */,
-				E953B8102B8112350007AC01 /* NavigationBarView.swift */,
-				E90FD5F22B84AD4E00358EEF /* LoadingView.swift */,
-				E90FD5F42B84AD7A00358EEF /* ButtonView.swift */,
 				E90FD5F62B84AD9400358EEF /* BackButton.swift */,
+				E90FD5F42B84AD7A00358EEF /* ButtonView.swift */,
+				E953B8092B80FFE60007AC01 /* InputView.swift */,
+				E90FD5F22B84AD4E00358EEF /* LoadingView.swift */,
+				E953B8102B8112350007AC01 /* NavigationBarView.swift */,
+				E9E794132B87477D00F2DA14 /* CustomNavigationLinkStyle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -518,7 +518,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E90FD6032B84ADC600358EEF /* CoffeeCellView.swift in Sources */,
 				E90FD5EB2B84AC3600358EEF /* CafesResponse.swift in Sources */,
 				E953B8072B80FF950007AC01 /* LoginView.swift in Sources */,
 				E953B8332B824EB40007AC01 /* LocationManagerr.swift in Sources */,
@@ -534,6 +533,7 @@
 				E90FD5E82B84AC3600358EEF /* SevenWindsStudioEndpoint.swift in Sources */,
 				E90FD5F72B84AD9400358EEF /* BackButton.swift in Sources */,
 				E90FD5F32B84AD4F00358EEF /* LoadingView.swift in Sources */,
+				E9E794142B87477D00F2DA14 /* CustomNavigationLinkStyle.swift in Sources */,
 				E90FD5E52B84AC3600358EEF /* URLParameterEncoder.swift in Sources */,
 				E9AEBCEF2B85C22700EF9644 /* LocationModel.swift in Sources */,
 				E90FD6012B84ADC600358EEF /* CafeListView.swift in Sources */,

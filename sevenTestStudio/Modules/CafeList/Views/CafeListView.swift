@@ -17,8 +17,9 @@ struct CafeListView: View {
     @State private var isMapButtonTapped = false
     
     var body: some View {
-	   NavigationView {
+	   NavigationStack {
 		  VStack {
+			 
 			 ScrollView {
 				ForEach(cafesVM.cafes) { cafe in
 				    NavigationLink(
@@ -26,26 +27,38 @@ struct CafeListView: View {
 						  .navigationBarBackButtonHidden(true),
 					   
 					   label: {
-						  VStack {
-							 Text(cafe.name)
-								.fontWeight(.semibold)
-								.foregroundColor(Color("headerTextField"))
-							 if let currentLocation = locationViewModel.currentLocation {
-								Text(cafe.distance(to: currentLocation))
-								    .font(.subheadline)
-								    .foregroundColor(Color("textField"))
+						  VStack(spacing: 6) {
+							 HStack {
+								Text(cafe.name)
+								    .bold()
+								    .font(.title2)
+								    .foregroundColor(Color("headerTextField"))
+								Spacer()
 							 }
+							 .padding(.leading, 10)
+							 HStack {
+								if let currentLocation = locationViewModel.currentLocation {
+								    Text(cafe.distance(to: currentLocation))
+									   .font(.subheadline)
+									   .foregroundColor(Color("textField"))
+								}
+								Spacer()
+							 }
+							 .padding(.leading, 10)
+							 
 						  }
+						  .frame(width: UIScreen.main.bounds.width - 26,
+							    height: 71)
+						  .background(Color("foregroundCell"))
+						  .cornerRadius(5)
+//						  .listRowInsets(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
+						  
 					   }
 				    )
-				    .frame(width: UIScreen.main.bounds.width - 26,
-						 height: 71)
-				    .background(Color("foregroundCell"))
-				    .cornerRadius(5)
-				    .listRowInsets(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
+				    
 				}	
 			 }
-			 ButtonView(title: "К Карте") {
+			 ButtonView(title: "На карте") {
 				isMapButtonTapped = true
 			 }
 			 NavigationLink(
@@ -56,6 +69,7 @@ struct CafeListView: View {
 			 )
 			 .hidden()
 		  }
+		  .padding(.top, 15)
 		  .toolbar {
 			 ToolbarItem(placement: .navigationBarLeading) {
 				BackButton(text: "Ближайшие кофейни")

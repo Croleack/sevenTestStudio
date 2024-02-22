@@ -41,18 +41,27 @@ struct LocationView: View {
 				    isShowDetails.toggle()
 				}
 			 }
+			 
 		  }
-			 .ignoresSafeArea()
+			 .ignoresSafeArea(.container, edges: .bottom)
 			 .sheet(isPresented: $isShowDetails) {
 				SelectedPlaceView(placeName: locationViewModel.selectedPlaceName,
 							   adress: locationViewModel.selectedPlaceAdress)
 			 }
-	   }
-	   .searchable(text: $locationViewModel.serachTerm)
-	   .onSubmit(of: .search) {
-		  locationViewModel.serch()
-		  
+			 .toolbar {
+				ToolbarItem(placement: .navigationBarLeading) {
+				    BackButton(text: "Карта")
+				}
+			 }
 	   }
     }
 }
+	   
+	  // .searchable(text: $locationViewModel.serachTerm)
+//	   .onSubmit(of: .search) {
+//		  locationViewModel.serch()
+//		  
+//	   }
+//    }
+//}
 

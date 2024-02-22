@@ -38,11 +38,10 @@ struct BackButton: View {
 			 .background(Color("navStrip"))
 			 .frame(width: UIScreen.main.bounds.width,
 				   height: 1)
+			 .padding(.bottom, 15)
 		  
 	   }
 	   .padding(.top, 15)
-	   .padding(.bottom, 15)
-	   
     }
 }
 

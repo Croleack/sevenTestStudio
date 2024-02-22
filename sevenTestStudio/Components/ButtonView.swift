@@ -21,6 +21,6 @@ struct ButtonView: View {
 	   }
 	   .background(Color("foregroundButton"))
 	   .cornerRadius(20)
-	   .padding(.top, 30.51)
+	   .padding(.bottom, 30.51)
     }
 }
