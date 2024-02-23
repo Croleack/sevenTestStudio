@@ -16,8 +16,9 @@ public enum SevenWindsStudioApi {
 
 extension SevenWindsStudioApi: EndpointType {
     var baseURL: URL {
-        guard let url = URL(string: "http://147.78.66.203:3210/") else { fatalError("baseURL could not be configured.")}
-        return url
+	   guard let url = URL(string: "http://147.78.66.203:3210/")
+	   else { fatalError("baseURL could not be configured.")}
+	   return url
     }
 
     var path: String {

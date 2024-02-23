@@ -51,7 +51,6 @@ class NetworkManager {
 
             do {
                 let apiResponse = try JSONDecoder().decode(T.self, from: responseData)
-                print(apiResponse)
                 completion(apiResponse, nil)
             } catch let error {
                 print("Error in decode for: \(T.self)\nError: \(error)")

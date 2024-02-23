@@ -17,7 +17,7 @@ class CafesViewModel: ObservableObject {
     init() {
 	   self.loadCafes()
     }
-    
+    //MARK: - functions that go to the network
     func loadCafes() {
 	   networkManager.loadCafes { success, error in
 		  if let error = error {
@@ -57,7 +57,7 @@ class CafesViewModel: ObservableObject {
 		  }
 	   }
     }
-    
+    //MARK: - functions for counting the amount of coffee
     func incrementCoffeeCount(for coffee: Coffee) {
 	   if let index = order.firstIndex(where: { $0.id == coffee.id }) {
 		  order[index].count += 1

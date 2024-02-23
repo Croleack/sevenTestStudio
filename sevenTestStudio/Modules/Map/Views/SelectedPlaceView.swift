@@ -9,31 +9,47 @@ import SwiftUI
 
 struct SelectedPlaceView: View {
     var placeName: String
-    var adress: String
+    var address: String
     
     var body: some View {
 	   VStack(alignment: .leading) {
 		  Text(placeName)
-			 .font(.system(size: 20, weight: .black))
+			 .font(.system(size: Constants.placeNameFontSize, weight: .black))
 			 .lineLimit(.zero)
-		  Text(adress)
-			 .padding(.top, 10)
-			 .padding(.bottom, 30)
 		  
-		  Button {
-
-		  } label: {
-			 Text("Маршрут")
-				.padding(.vertical, 15)
+		  Text(address)
+			 .padding(.top, Constants.addressTopPadding)
+			 .padding(.bottom, Constants.addressBottomPadding)
+		  
+		  Button(action: {
+			 
+		  }) {
+			 Text(Constants.routeButtonText)
+				.padding(.vertical, Constants.buttonVerticalPadding)
 				.frame(maxWidth: .infinity)
 				.foregroundColor(.white)
-				.background(Color("foregroundButton"))
+				.background(Color(Constants.foregroundButtonColor))
 		  }
-		  .cornerRadius(20)
+		  .cornerRadius(Constants.buttonCornerRadius)
 	   }
-	   .padding(.horizontal, 18)
-	   .presentationDetents([.height(200)])
+	   .padding(.horizontal, Constants.horizontalPadding)
+	   .presentationDetents([.height(Constants.detentHeight)])
     }
 }
 
+// MARK: - Constants
 
+fileprivate extension SelectedPlaceView {
+    enum Constants {
+	   static let placeNameFontSize: CGFloat = 20
+	   static let addressTopPadding: CGFloat = 10
+	   static let addressBottomPadding: CGFloat = 30
+	   static let buttonVerticalPadding: CGFloat = 15
+	   static let buttonCornerRadius: CGFloat = 20
+	   static let horizontalPadding: CGFloat = 18
+	   static let detentHeight: CGFloat = 200
+	   static let routeButtonText = "Маршрут"
+	   static let foregroundButtonColor = "foregroundButton"
+	   
+    }
+}

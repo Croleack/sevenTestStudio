@@ -29,7 +29,7 @@
 		E90FD6012B84ADC600358EEF /* CafeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FC2B84ADC600358EEF /* CafeListView.swift */; };
 		E90FD6022B84ADC600358EEF /* CafeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FD2B84ADC600358EEF /* CafeDetailView.swift */; };
 		E90FD6042B84ADC600358EEF /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FD5FF2B84ADC600358EEF /* OrderView.swift */; };
-		E91728B32B85C03500BD06B3 /* LocationManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91728B22B85C03500BD06B3 /* LocationManagerViewModel.swift */; };
+		E91728B32B85C03500BD06B3 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91728B22B85C03500BD06B3 /* LocationViewModel.swift */; };
 		E953B7D92B80FDE50007AC01 /* sevenTestStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B7D82B80FDE50007AC01 /* sevenTestStudioApp.swift */; };
 		E953B7DB2B80FDE50007AC01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B7DA2B80FDE50007AC01 /* ContentView.swift */; };
 		E953B7DD2B80FDE70007AC01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E953B7DC2B80FDE70007AC01 /* Assets.xcassets */; };
@@ -42,7 +42,7 @@
 		E953B80C2B8100280007AC01 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B80B2B8100270007AC01 /* RegistrationView.swift */; };
 		E953B80F2B8100510007AC01 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B80E2B8100510007AC01 /* AuthViewModel.swift */; };
 		E953B8112B8112350007AC01 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B8102B8112350007AC01 /* NavigationBarView.swift */; };
-		E953B8332B824EB40007AC01 /* LocationManagerr.swift in Sources */ = {isa = PBXBuildFile; fileRef = E953B8322B824EB40007AC01 /* LocationManagerr.swift */; };
+		E96E4CE12B886BB30094A831 /* Extension + collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E4CE02B886BB30094A831 /* Extension + collection.swift */; };
 		E9AEBCEF2B85C22700EF9644 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AEBCEE2B85C22700EF9644 /* LocationModel.swift */; };
 		E9AEBCF12B85CFAF00EF9644 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AEBCF02B85CFAF00EF9644 /* LocationView.swift */; };
 		E9AEBCF52B85D93300EF9644 /* SelectedPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AEBCF42B85D93300EF9644 /* SelectedPlaceView.swift */; };
@@ -89,7 +89,7 @@
 		E90FD5FC2B84ADC600358EEF /* CafeListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeListView.swift; sourceTree = "<group>"; };
 		E90FD5FD2B84ADC600358EEF /* CafeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeDetailView.swift; sourceTree = "<group>"; };
 		E90FD5FF2B84ADC600358EEF /* OrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
-		E91728B22B85C03500BD06B3 /* LocationManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerViewModel.swift; sourceTree = "<group>"; };
+		E91728B22B85C03500BD06B3 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		E953B7D52B80FDE50007AC01 /* sevenTestStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sevenTestStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E953B7D82B80FDE50007AC01 /* sevenTestStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sevenTestStudioApp.swift; sourceTree = "<group>"; };
 		E953B7DA2B80FDE50007AC01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		E953B80E2B8100510007AC01 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E953B8102B8112350007AC01 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		E953B82F2B81C5000007AC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E953B8322B824EB40007AC01 /* LocationManagerr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerr.swift; sourceTree = "<group>"; };
+		E96E4CE02B886BB30094A831 /* Extension + collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + collection.swift"; sourceTree = "<group>"; };
 		E9AEBCEE2B85C22700EF9644 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		E9AEBCF02B85CFAF00EF9644 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		E9AEBCF42B85D93300EF9644 /* SelectedPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPlaceView.swift; sourceTree = "<group>"; };
@@ -229,10 +229,9 @@
 		E91728B12B85C01300BD06B3 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				E96E4CDA2B87E0FB0094A831 /* ViewModel */,
+				E96E4CD92B87E0C70094A831 /* Models */,
 				E9AEBCF22B85D91600EF9644 /* Views */,
-				E91728B22B85C03500BD06B3 /* LocationManagerViewModel.swift */,
-				E9AEBCEE2B85C22700EF9644 /* LocationModel.swift */,
-				E9AEBCF02B85CFAF00EF9644 /* LocationView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -262,7 +261,6 @@
 			children = (
 				E953B8022B80FF300007AC01 /* Application */,
 				E953B8122B8128D90007AC01 /* Common */,
-				E953B8082B80FFD60007AC01 /* Components */,
 				E953B82F2B81C5000007AC01 /* Info.plist */,
 				E953B8032B80FF3F0007AC01 /* Modules */,
 				E953B7DE2B80FDE70007AC01 /* Preview Content */,
@@ -300,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				E953B7D82B80FDE50007AC01 /* sevenTestStudioApp.swift */,
+				E953B7DA2B80FDE50007AC01 /* ContentView.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -332,17 +331,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		E953B8082B80FFD60007AC01 /* Components */ = {
+		E953B8082B80FFD60007AC01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				E90FD5F62B84AD9400358EEF /* BackButton.swift */,
 				E90FD5F42B84AD7A00358EEF /* ButtonView.swift */,
+				E9E794132B87477D00F2DA14 /* CustomNavigationLinkStyle.swift */,
 				E953B8092B80FFE60007AC01 /* InputView.swift */,
 				E90FD5F22B84AD4E00358EEF /* LoadingView.swift */,
 				E953B8102B8112350007AC01 /* NavigationBarView.swift */,
-				E9E794132B87477D00F2DA14 /* CustomNavigationLinkStyle.swift */,
 			);
-			path = Components;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E953B80D2B8100390007AC01 /* ViewModel */ = {
@@ -356,8 +355,9 @@
 		E953B8122B8128D90007AC01 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E96E4CDF2B886B950094A831 /* Extensions */,
+				E953B8082B80FFD60007AC01 /* Views */,
 				E953B7DC2B80FDE70007AC01 /* Assets.xcassets */,
-				E953B7DA2B80FDE50007AC01 /* ContentView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -366,23 +366,39 @@
 			isa = PBXGroup;
 			children = (
 				E90FD5D02B84AC3600358EEF /* Network */,
-				E953B8142B812AFD0007AC01 /* Locat */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		E953B8142B812AFD0007AC01 /* Locat */ = {
+		E96E4CD92B87E0C70094A831 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E953B8322B824EB40007AC01 /* LocationManagerr.swift */,
+				E9AEBCEE2B85C22700EF9644 /* LocationModel.swift */,
 				E90FD5962B8312FB00358EEF /* Cafe.swift */,
 			);
-			path = Locat;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E96E4CDA2B87E0FB0094A831 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E91728B22B85C03500BD06B3 /* LocationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E96E4CDF2B886B950094A831 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E96E4CE02B886BB30094A831 /* Extension + collection.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E9AEBCF22B85D91600EF9644 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E9AEBCF02B85CFAF00EF9644 /* LocationView.swift */,
 				E9AEBCF42B85D93300EF9644 /* SelectedPlaceView.swift */,
 			);
 			path = Views;
@@ -520,7 +536,6 @@
 			files = (
 				E90FD5EB2B84AC3600358EEF /* CafesResponse.swift in Sources */,
 				E953B8072B80FF950007AC01 /* LoginView.swift in Sources */,
-				E953B8332B824EB40007AC01 /* LocationManagerr.swift in Sources */,
 				E953B80A2B80FFE60007AC01 /* InputView.swift in Sources */,
 				E953B80F2B8100510007AC01 /* AuthViewModel.swift in Sources */,
 				E953B7DB2B80FDE50007AC01 /* ContentView.swift in Sources */,
@@ -536,6 +551,7 @@
 				E9E794142B87477D00F2DA14 /* CustomNavigationLinkStyle.swift in Sources */,
 				E90FD5E52B84AC3600358EEF /* URLParameterEncoder.swift in Sources */,
 				E9AEBCEF2B85C22700EF9644 /* LocationModel.swift in Sources */,
+				E96E4CE12B886BB30094A831 /* Extension + collection.swift in Sources */,
 				E90FD6012B84ADC600358EEF /* CafeListView.swift in Sources */,
 				E90FD6022B84ADC600358EEF /* CafeDetailView.swift in Sources */,
 				E953B8112B8112350007AC01 /* NavigationBarView.swift in Sources */,
@@ -546,7 +562,7 @@
 				E90FD5F02B84AC3600358EEF /* Router.swift in Sources */,
 				E90FD5E62B84AC3600358EEF /* JSONParameterEncoder.swift in Sources */,
 				E90FD5E92B84AC3600358EEF /* LoginResponse.swift in Sources */,
-				E91728B32B85C03500BD06B3 /* LocationManagerViewModel.swift in Sources */,
+				E91728B32B85C03500BD06B3 /* LocationViewModel.swift in Sources */,
 				E90FD6002B84ADC600358EEF /* CafesViewModel.swift in Sources */,
 				E90FD5EE2B84AC3600358EEF /* HTTPTask.swift in Sources */,
 				E90FD5EF2B84AC3600358EEF /* HTTPMethod.swift in Sources */,
@@ -641,7 +657,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -698,7 +714,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -720,11 +736,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sevenTestStudio/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Приложение использует ваше местоположение, чтобы подобрать кофейню поближе";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -751,11 +768,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sevenTestStudio/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Приложение использует ваше местоположение, чтобы подобрать кофейню поближе";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

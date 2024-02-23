@@ -30,11 +30,11 @@ struct Cafe: Identifiable, Equatable {
 extension ShortCafeResponse {
     var mapToCafe: Cafe {
 	   let coordinate = CLLocationCoordinate2D(
-		  latitude: Double(self.point?.latitude ?? "") ?? 0,
-		  longitude: Double(self.point?.longitude ?? "") ?? 0
+		  latitude: Double(self.point?.latitude ?? "") ?? .zero,
+		  longitude: Double(self.point?.longitude ?? "") ?? .zero
 	   )
 	   return Cafe(
-		  id: self.id ?? 0,
+		  id: self.id ?? .zero,
 		  name: self.name ?? "",
 		  coordinate: coordinate
 	   )

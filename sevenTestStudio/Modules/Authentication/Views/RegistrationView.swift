@@ -17,81 +17,67 @@ struct RegistrationView: View {
     var body: some View {
 	   VStack {
 		  
-		  NavigationBarView(title: "Регистрация")
-		  VStack(spacing: 24.49) {
+		  NavigationBarView(title: Constants.registrationTitle)
+		  VStack(spacing: Constants.verticalSpacing) {
 			 InputView(text: $email,
-					 title: "e-mail",
-					 placeholder: "example@example.ru")
+					 title: Constants.emailTitle,
+					 placeholder: Constants.emailPlaceholder)
 			 .autocapitalization(.none)
 			 
 			 InputView(text: $password,
-					 title: "Пароль",
-					 placeholder: "******",
+					 title: Constants.passwordTitle,
+					 placeholder: Constants.passwordPlaceholder,
 					 isSecureField: true)
 			 
 			 ZStack(alignment: .trailing) {
 				InputView(text: $repeatPassword,
-						title: "Повторите пароль",
-						placeholder: "******",
+						title: Constants.repeatPasswordTitle,
+						placeholder: Constants.passwordPlaceholder,
 						isSecureField: true)
 				
 				if !password.isEmpty && !repeatPassword.isEmpty {
 				    if password == repeatPassword {
-					   Image(systemName: "checkmark.circle.fill")
+					   Image(systemName: Constants.checkmarkImage)
 						  .imageScale(.large)
 						  .fontWeight(.bold)
 						  .foregroundColor(Color(.systemGreen))
 				    } else {
-					   Image(systemName: "xmark.circle.fill")
+					   Image(systemName: Constants.xmarkImage)
 						  .imageScale(.large)
 						  .fontWeight(.bold)
 						  .foregroundColor(Color(.systemRed))
 				    }
 				}
 			 }
-			 
-			 
 		  }
-		  .padding(.top, 190)
-		  .padding(.horizontal, 18)
+		  .padding(.top, Constants.topPadding)
+		  .padding(.horizontal, Constants.horizontalPadding)
 		  
-		  Button {
+		  ButtonView(title: Constants.registerButtonTitle) {
 			 viewModel.register(login: email, password: password)
-		  } label: {
-			 Text("Зарегистрироваться")
-				.fontWeight(.semibold)
-				.foregroundColor(Color("textButton"))
-				.frame(width: UIScreen.main.bounds.width - 38,
-					  height: 47)
 		  }
-		  .background(Color("foregroundButton"))
+		  .padding(.top, Constants.buttonTopPadding)
 		  .disabled(!formIsValid)
 		  .opacity(formIsValid ? 1.0 : 0.5)
-		  .cornerRadius(20)
-		  .padding(.top, 30.51)
-		  Image(systemName: viewModel.isAuthenticated ? "lock.fill":
-				"lock.open")
+		  
 		  Spacer()
 		  
 		  Button {
 			 dismiss()
 		  } label: {
 			 HStack {
-				Text("Уже есть учетная запись")
-				Text("Войти")
+				Text(Constants.alreadyHaveAccountText)
+				Text(Constants.loginText)
 				    .fontWeight(.bold)
 			 }
-			 .foregroundColor(Color("foregroundButton"))
-			 .font(.system(size: 14))
+			 .foregroundColor(Color(Constants.foregroundButtonColor))
+			 .font(.system(size: Constants.buttonFontSize))
 		  }
-		  
-	   }
-	   .onTapGesture {
-		  viewModel.hideKeyboard()
+		  .padding(.bottom, Constants.buttonBottomPadding)
 	   }
     }
 }
-
+//MARK: - extension RegistrationView (minimal text field validation)
 extension RegistrationView: AuthenticationFormProtocol {
     var formIsValid: Bool {
 	   return !email.isEmpty
@@ -102,7 +88,27 @@ extension RegistrationView: AuthenticationFormProtocol {
     }
 }
 
-#Preview {
-    RegistrationView()
-}
+// MARK: - Constants
 
+fileprivate extension RegistrationView {
+    enum Constants {
+	   static let registrationTitle = "Регистрация"
+	   static let emailTitle = "e-mail"
+	   static let emailPlaceholder = "example@example.ru"
+	   static let passwordTitle = "Пароль"
+	   static let repeatPasswordTitle = "Повторите пароль"
+	   static let passwordPlaceholder = "******"
+	   static let checkmarkImage = "checkmark.circle.fill"
+	   static let xmarkImage = "xmark.circle.fill"
+	   static let registerButtonTitle = "Регистрация"
+	   static let alreadyHaveAccountText = "Уже есть учетная запись"
+	   static let loginText = "Войти"
+	   static let foregroundButtonColor = "foregroundButton"
+	   static let verticalSpacing = 24.49
+	   static let topPadding = 190.0
+	   static let horizontalPadding = 18.0
+	   static let buttonTopPadding = 30.51
+	   static let buttonFontSize = 14.0
+	   static let buttonBottomPadding = 10.0
+    }
+}

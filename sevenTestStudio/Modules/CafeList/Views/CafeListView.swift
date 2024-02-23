@@ -8,10 +8,9 @@
 import SwiftUI
 import CoreLocation
     
-
 struct CafeListView: View {
     @ObservedObject var cafesVM: CafesViewModel
-    @ObservedObject var locationViewModel: LocationManagerViewModel
+    @ObservedObject var locationViewModel: LocationViewModel
     @State private var currentLocation: CLLocationCoordinate2D? = nil
     @State private var isLoading = false
     @State private var isMapButtonTapped = false
@@ -19,70 +18,82 @@ struct CafeListView: View {
     var body: some View {
 	   NavigationStack {
 		  VStack {
-			 
+			 NavigationBarView(title: Constants.navigationBarTitle)
 			 ScrollView {
 				ForEach(cafesVM.cafes) { cafe in
 				    NavigationLink(
 					   destination: CafeDetailView(id: cafe.id, cafesVM: cafesVM)
 						  .navigationBarBackButtonHidden(true),
-					   
 					   label: {
-						  VStack(spacing: 6) {
+						  VStack(spacing: Constants.verticalSpacing) {
 							 HStack {
 								Text(cafe.name)
 								    .bold()
 								    .font(.title2)
-								    .foregroundColor(Color("headerTextField"))
+								    .foregroundColor(Color(Constants.headerTextFieldColor))
 								Spacer()
 							 }
-							 .padding(.leading, 10)
+							 .padding(.leading, Constants.leadingPadding)
 							 HStack {
 								if let currentLocation = locationViewModel.currentLocation {
 								    Text(cafe.distance(to: currentLocation))
 									   .font(.subheadline)
-									   .foregroundColor(Color("textField"))
+									   .foregroundColor(Color(Constants.textFieldColor))
 								}
 								Spacer()
 							 }
-							 .padding(.leading, 10)
-							 
+							 .padding(.leading, Constants.leadingPadding)
 						  }
-						  .frame(width: UIScreen.main.bounds.width - 26,
-							    height: 71)
-						  .background(Color("foregroundCell"))
-						  .cornerRadius(5)
-//						  .listRowInsets(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
-						  
+						  .frame(width: UIScreen.main.bounds.width - Constants.frameWidth,
+							    height: Constants.rowHeight)
+						  .background(Color(Constants.cellBackgroundColor))
+						  .cornerRadius(Constants.cornerRadius)
 					   }
 				    )
-				    
-				}	
+				}
 			 }
-			 ButtonView(title: "На карте") {
-				isMapButtonTapped = true
+			 NavigationLink {
+				LocationView()
+				    .navigationBarBackButtonHidden(true)
+			 } label: {
+				Text(Constants.mapButtonText)
 			 }
-			 NavigationLink(
-				destination: LocationView()
-				    .navigationBarHidden(true),
-				isActive: $isMapButtonTapped,
-				label: { EmptyView() }
-			 )
-			 .hidden()
-		  }
-		  .padding(.top, 15)
-		  .toolbar {
-			 ToolbarItem(placement: .navigationBarLeading) {
-				BackButton(text: "Ближайшие кофейни")
-			 }
+			 .padding(.bottom, Constants.bottomPadding)
+			 .buttonStyle(CustomNavigationLinkStyle())
 		  }
 	   }
 	   .onAppear {
-		  if isLoading { LoadingView() }
 		  cafesVM.loadCafes()
 		  locationViewModel.checkLocationIsEnabled()
 	   }
+	   .overlay(
+		  Group {
+			 if isLoading {
+				LoadingView()
+			 }
+		  }
+	   )
 	   .refreshable {
 		  cafesVM.loadCafes()
 	   }
+    }
+}
+
+// MARK: - Constants
+
+fileprivate extension CafeListView {
+    enum Constants {
+	   static let navigationBarTitle = "Ближайшие кафе"
+	   static let headerTextFieldColor = "headerTextField"
+	   static let textFieldColor = "textField"
+	   static let cellBackgroundColor = "foregroundCell"
+	   static let mapButtonText = "На карте"
+	   static let verticalSpacing = 6.0
+	   static let leadingPadding = 10.0
+	   static let frameWidth = 26.0
+	   static let cornerRadius = 5.0
+	   static let rowHeight = 71.0
+	   static let bottomPadding = 32.49
+	   
     }
 }

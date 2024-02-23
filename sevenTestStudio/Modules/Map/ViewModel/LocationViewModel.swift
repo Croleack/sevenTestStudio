@@ -8,12 +8,12 @@
 import Foundation
 import MapKit
 
-class LocationManagerViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
+class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     private let networkManager = NetworkManager()
     var locationManager: CLLocationManager?
-//    var serachTerm = ""
-    //
+    var serachTerm = ""
+    
     @Published private(set) var currentLocation: CLLocationCoordinate2D?
     
     @Published var cafes: [Cafe] = []
@@ -43,34 +43,44 @@ class LocationManagerViewModel: NSObject, ObservableObject, CLLocationManagerDel
     }
     
     func checkLocationIsEnabled() {
-	   if CLLocationManager.locationServicesEnabled() {
-		  locationManager = CLLocationManager()
-		  locationManager?.delegate = self
-	   } else {
-		  print("упс не включил локацию")
+	   DispatchQueue.global(qos: .background).async {
+		  if CLLocationManager.locationServicesEnabled() {
+			 DispatchQueue.main.async {
+				self.locationManager = CLLocationManager()
+				self.locationManager?.delegate = self
+			 }
+		  } else {
+			 print("упс не включил локацию")
+		  }
 	   }
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-	   checkLocationAuth()
+	   DispatchQueue.main.async {
+		  self.checkLocationAuth()
+	   }
     }
-    
+    ///if the user disables the location, printanet will appear (an alert can be added in the future)
     func checkLocationAuth() {
 	   guard let locationManager = locationManager else { return }
 	   switch locationManager.authorizationStatus {
 	   case .notDetermined:
-		  locationManager.requestWhenInUseAuthorization()
+		  DispatchQueue.main.async {
+			 locationManager.requestWhenInUseAuthorization()
+		  }
 	   case .restricted:
 		  print("Ограничен")
 	   case .denied:
 		  print("Отключены")
 	   case .authorizedAlways, .authorizedWhenInUse:
 		  if let userLocation = locationManager.location {
-			 region = MKCoordinateRegion(
-				center: userLocation.coordinate,
-				span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-			 )
-			 currentLocation = userLocation.coordinate
+			 DispatchQueue.main.async {
+				self.region = MKCoordinateRegion(
+				    center: userLocation.coordinate,
+				    span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+				)
+				self.currentLocation = userLocation.coordinate
+			 }
 		  } else {
 			 print("Не удалось получить текущее местоположение")
 		  }
@@ -78,38 +88,38 @@ class LocationManagerViewModel: NSObject, ObservableObject, CLLocationManagerDel
 		  break
 	   }
     }
-    
-//    func serch() {
-//	   let request = MKLocalSearch.Request()
-//	   request.naturalLanguageQuery = serachTerm
-//	   request.region = region
-//	   
-//	   let search = MKLocalSearch(request: request)
-//	   
-//	   search.start { response, error in
-//		  guard let response = response else {
-//			 if let error = error {
-//				print("Ошибка поиска: \(error.localizedDescription)")
-//			 }
-//			 return
-//		  }
-//		  
-//		  DispatchQueue.main.async {
-//			 self.places = response.mapItems.map({ item in
-//				Place(name: item.name ?? "",
-//					 placemark: item.placemark,
-//					 coordinate: item.placemark.coordinate,
-//					 adress: item.placemark.locality
-//				)
-//			 })
-//		  }
-//	   }
-//    }
-    
+    ///function for searching points on the map
+    func serch() {
+	   let request = MKLocalSearch.Request()
+	   request.naturalLanguageQuery = serachTerm
+	   request.region = region
+	   
+	   let search = MKLocalSearch(request: request)
+	   
+	   search.start { response, error in
+		  guard let response = response else {
+			 if let error = error {
+				print("Ошибка поиска: \(error.localizedDescription)")
+			 }
+			 return
+		  }
+		  
+		  DispatchQueue.main.async {
+			 self.places = response.mapItems.map({ item in
+				Place(name: item.name ?? "",
+					 placemark: item.placemark,
+					 coordinate: item.placemark.coordinate,
+					 adress: item.placemark.locality
+				)
+			 })
+		  }
+	   }
+    }
+    ///function when tapped
     func selectedPlace(for place: Place) {
 	   self.selectedPlace = place
     }
-    
+    ///function for displaying coffee shops on the map
     func addCafesToMap() {
 	   places.removeAll()
 	   

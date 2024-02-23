@@ -16,39 +16,29 @@ struct LoginView: View {
 	   NavigationStack {
 		  VStack {
 			 
-			 NavigationBarView(title: "Вход")
+			 NavigationBarView(title: Constants.loginTitle)
 			 
-			 VStack(spacing: 24.49) {
+			 VStack(spacing: Constants.verticalSpacing) {
 				InputView(text: $email,
-						title: "e-mail",
-						placeholder: "example@example.ru")
+						title: Constants.emailTitle,
+						placeholder: Constants.emailPlaceholder)
 				.autocapitalization(.none)
 				
 				InputView(text: $password,
-						title: "Пароль",
-						placeholder: "******",
+						title: Constants.passwordTitle,
+						placeholder: Constants.passwordPlaceholder,
 						isSecureField: true)
 			 }
-			 .padding(.horizontal, 18)
-			 .padding(.top, 190)
+			 .padding(.horizontal, Constants.horizontalPadding)
+			 .padding(.top, Constants.topPadding)
 			 
-			 Button {
+			 ButtonView(title: Constants.loginButtonTitle) {
 				viewModel.login(login: email, password: password)
-			 } label: {
-				Text("Войти")
-				    .fontWeight(.semibold)
-				    .foregroundColor(Color("textButton"))
-				    .frame(width: UIScreen.main.bounds.width - 38,
-						 height: 47)
 			 }
-			 .background(Color("foregroundButton"))
+			 .padding(.top, Constants.buttonTopPadding)
 			 .disabled(!formIsValid)
 			 .opacity(formIsValid ? 1.0 : 0.5)
-			 .cornerRadius(20)
-			 .padding(.top, 30.51)
 			 
-			 Image(systemName: viewModel.isAuthenticated ? "lock.fill":
-				    "lock.open")
 			 Spacer()
 			 
 			 NavigationLink {
@@ -56,18 +46,19 @@ struct LoginView: View {
 				    .navigationBarBackButtonHidden(true)
 			 } label: {
 				HStack {
-				    Text("Нет учетной записи?")
-				    Text("Зарегистрироваться")
+				    Text(Constants.noAccountText)
+				    Text(Constants.registerText)
 					   .fontWeight(.bold)
 				}
-				.foregroundColor(Color("foregroundButton"))
-				.font(.system(size: 14))
+				.foregroundColor(Color(Constants.foregroundButtonColor))
+				.font(.system(size: Constants.buttonFontSize))
 			 }
+			 .padding(.bottom, Constants.buttonBottomPadding)
 		  }
 	   }
     }
 }
-
+//MARK: - extension LoginView (minimal text field validation)
 extension LoginView: AuthenticationFormProtocol {
     var formIsValid: Bool {
 	   return !email.isEmpty
@@ -77,6 +68,24 @@ extension LoginView: AuthenticationFormProtocol {
     }
 }
 
-#Preview {
-    LoginView()
+// MARK: - Constants
+
+fileprivate extension LoginView {
+    enum Constants {
+	   static let loginTitle = "Вход"
+	   static let emailTitle = "e-mail"
+	   static let emailPlaceholder = "example@example.ru"
+	   static let passwordTitle = "Пароль"
+	   static let passwordPlaceholder = "******"
+	   static let loginButtonTitle = "Войти"
+	   static let noAccountText = "Нет учетной записи?"
+	   static let registerText = "Зарегистрироваться"
+	   static let foregroundButtonColor = "foregroundButton"
+	   static let verticalSpacing = 24.49
+	   static let horizontalPadding = 18.0
+	   static let topPadding = 190.0
+	   static let buttonTopPadding = 30.51
+	   static let buttonFontSize = 14.0
+	   static let buttonBottomPadding = 10.0
+    }
 }
