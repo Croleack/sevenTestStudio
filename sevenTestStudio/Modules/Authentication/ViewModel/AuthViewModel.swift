@@ -23,7 +23,7 @@ class AuthViewModel: ObservableObject {
 	   UserDefaults.standard.setValue(token, forKey: "token")
 	   UserDefaults.standard.set(expirationDate, forKey: "expirationDate")
     }
-    
+    //MARK: - going network
     func login(login: String, password: String) {
 	   networkManager.auth(login: login, password: password) { success, error in
 		  if let error = error {

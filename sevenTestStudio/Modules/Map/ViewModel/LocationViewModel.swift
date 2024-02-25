@@ -26,7 +26,7 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 									  span: MKCoordinateSpan(
 									   latitudeDelta: 0.1,
 									   longitudeDelta: 0.1))
-    
+    ///выбранное название
     var selectedPlaceName: String {
 	   guard let selectPlace = selectedPlace else { return ""}
 	   
@@ -41,7 +41,7 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 	   }
 	   return ""
     }
-    
+    ///check if the location manager is enabled
     func checkLocationIsEnabled() {
 	   DispatchQueue.global(qos: .background).async {
 		  if CLLocationManager.locationServicesEnabled() {
@@ -54,7 +54,6 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
 		  }
 	   }
     }
-    
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
 	   DispatchQueue.main.async {
 		  self.checkLocationAuth()

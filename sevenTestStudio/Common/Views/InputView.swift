@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+///this type is responsible for text fields during authentication and registration
 struct InputView: View {
     
     @Binding var text: String
@@ -27,10 +27,16 @@ struct InputView: View {
 			 SecureField(placeholder, text: $text)
 				.font(.system(size: Constants.textFieldFontSize))
 				.foregroundColor(Color(Constants.textFieldColor))
+				.onTapGesture {
+				    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+				}
 		  } else {
 			 TextField(placeholder, text: $text)
 				.font(.system(size: Constants.textFieldFontSize))
 				.foregroundColor(Color(Constants.textFieldColor))
+				.onTapGesture {
+				    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+				}
 		  }
 		  Divider()
 	   }
